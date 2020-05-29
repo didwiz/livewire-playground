@@ -1,5 +1,4 @@
-const mix = require('laravel-mix');
-
+const mix = require("laravel-mix");
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -12,8 +11,19 @@ const mix = require('laravel-mix');
  */
 
 mix
-  .js('resources/js/app.js', 'public/js')
-  .sass('resources/sass/app.scss', 'public/css');
-mix.postCss('resources/css/app.css', 'public/css', [require('tailwindcss')]);
+  .js("resources/js/app.js", "public/js")
+  .sass("resources/sass/app.scss", "public/css");
+mix.postCss("resources/css/app.css", "public/css", [require("tailwindcss")]);
 
-mix.browserSync('https://audiotap.test');
+mix.browserSync("https://audiotap.test");
+
+mix.webpackConfig({
+  module: {
+    rules: [
+      {
+        test: /\.postcss$/,
+        use: ["style-loader", "postcss-loader"]
+      }
+    ]
+  }
+});
