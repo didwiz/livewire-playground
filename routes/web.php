@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::view('/login', 'auth.login');
+Route::view('/signup', 'auth.sign-up');

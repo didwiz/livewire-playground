@@ -10,9 +10,9 @@
             src="/img/logos/workflow-mark-on-white.svg"
             alt="Workflow"
           /> -->
-          <h1>AudioTap</h1>
+          <h1 class="font-bold">AudioTap</h1>
           <h2 class="mt-6 text-3xl leading-9 font-extrabold text-gray-900">
-            Sign in to your account
+            Create an account
           </h2>
           <p class="mt-2 text-sm leading-5 text-gray-600 max-w">
             Or
@@ -20,7 +20,7 @@
               href="#"
               class="font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:underline transition ease-in-out duration-150"
             >
-              start your 14-day free trial
+              login here if you already have an account
             </a>
           </p>
         </div>
@@ -29,7 +29,7 @@
           <div>
             <div>
               <p class="text-sm leading-5 font-medium text-gray-700">
-                Sign in with
+                Sign up with
               </p>
 
               <div class="mt-1 grid grid-cols-3 gap-3">
@@ -112,7 +112,7 @@
           </div>
 
           <div class="mt-6">
-            <form @click.prevent="submit">
+            <form @submit.prevent="submit">
               <div>
                 <label
                   for="email"
@@ -147,11 +147,65 @@
                 </div>
               </div>
 
+              <!-- <div class="mt-6">
+                <label
+                  for="User Type"
+                  class="block text-sm font-medium leading-5 text-gray-700"
+                >
+                  Are you a
+                </label>
+                <div class="mt-1 rounded-md shadow-sm flex justify-between">
+                  <input
+                    id="label"
+                    type="radio"
+                    value="1"
+                    v-model="user_type"
+                    required
+                  />
+                  <label
+                  for="label"
+                  class="block text-sm font-medium leading-5 text-gray-700"
+                  >Record label</label>
+                  <span>or</span>
+                  <input
+                    id="single"
+                    type="radio"
+                    value="0"
+                    v-model="user_type"
+                    required
+                  />
+                   <label
+                  for="single"
+                  class="block text-sm font-medium leading-5 text-gray-700"
+                  >an unsigned artist</label>
+                </div>
+              </div> -->
+              <div class="mt-6">
+                <label
+                  for="password"
+                  class="block text-sm font-medium leading-5 text-gray-700"
+                >
+                  Are you a :
+                </label>
+                <div class="flex items-center mt-2">
+                  <input id="push_everything" name="form-input push_notifications" type="radio" class="form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out" />
+                  <label for="push_everything" class="ml-3">
+                    <span class="block text-sm leading-5 font-medium text-gray-700">Record Label</span>
+                  </label>
+                </div>
+                <div class="mt-4 flex items-center">
+                  <input id="push_email" name="form-input push_notifications" type="radio" class="form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out" />
+                  <label for="push_email" class="ml-3">
+                    <span class="block text-sm leading-5 font-medium text-gray-700">Independent Artist</span>
+                  </label>
+                </div>
+              </div>
+
               <div class="mt-6">
                 <span class="block w-full rounded-md shadow-sm">
                   <button
                     type="submit"
-                    class="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out"
+                    class="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-teal-400 hover:bg-teal-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out"
                   >
                     Sign Up
                   </button>
@@ -174,9 +228,14 @@
 
 <script>
 export default {
+  data() {
+    return {
+      // axios.post('')
+    }
+  },
   methods: {
     submit() {
-      alert("works");
+
     }
   }
 };

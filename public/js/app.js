@@ -2327,11 +2327,67 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {// axios.post('')
+    };
+  },
   methods: {
-    submit: function submit() {
-      alert("works");
-    }
+    submit: function submit() {}
   }
 });
 
@@ -38392,7 +38448,7 @@ var render = function() {
                   {
                     staticClass: "text-sm leading-5 font-medium text-gray-700"
                   },
-                  [_vm._v("\n              Sign in with\n            ")]
+                  [_vm._v("\n              Sign up with\n            ")]
                 ),
                 _vm._v(" "),
                 _c("div", { staticClass: "mt-1 grid grid-cols-3 gap-3" }, [
@@ -38536,13 +38592,21 @@ var render = function() {
                 "form",
                 {
                   on: {
-                    click: function($event) {
+                    submit: function($event) {
                       $event.preventDefault()
                       return _vm.submit($event)
                     }
                   }
                 },
-                [_vm._m(2), _vm._v(" "), _vm._m(3), _vm._v(" "), _vm._m(4)]
+                [
+                  _vm._m(2),
+                  _vm._v(" "),
+                  _vm._m(3),
+                  _vm._v(" "),
+                  _vm._m(4),
+                  _vm._v(" "),
+                  _vm._m(5)
+                ]
               )
             ])
           ])
@@ -38550,7 +38614,7 @@ var render = function() {
       ]
     ),
     _vm._v(" "),
-    _vm._m(5)
+    _vm._m(6)
   ])
 }
 var staticRenderFns = [
@@ -38559,12 +38623,12 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", [
-      _c("h1", [_vm._v("AudioTap")]),
+      _c("h1", { staticClass: "font-bold" }, [_vm._v("AudioTap")]),
       _vm._v(" "),
       _c(
         "h2",
         { staticClass: "mt-6 text-3xl leading-9 font-extrabold text-gray-900" },
-        [_vm._v("\n          Sign in to your account\n        ")]
+        [_vm._v("\n          Create an account\n        ")]
       ),
       _vm._v(" "),
       _c("p", { staticClass: "mt-2 text-sm leading-5 text-gray-600 max-w" }, [
@@ -38576,7 +38640,11 @@ var staticRenderFns = [
               "font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:underline transition ease-in-out duration-150",
             attrs: { href: "#" }
           },
-          [_vm._v("\n            start your 14-day free trial\n          ")]
+          [
+            _vm._v(
+              "\n            login here if you already have an account\n          "
+            )
+          ]
         )
       ])
     ])
@@ -38652,12 +38720,75 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "mt-6" }, [
+      _c(
+        "label",
+        {
+          staticClass: "block text-sm font-medium leading-5 text-gray-700",
+          attrs: { for: "password" }
+        },
+        [_vm._v("\n                Are you a :\n              ")]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "flex items-center mt-2" }, [
+        _c("input", {
+          staticClass:
+            "form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out",
+          attrs: {
+            id: "push_everything",
+            name: "form-input push_notifications",
+            type: "radio"
+          }
+        }),
+        _vm._v(" "),
+        _c(
+          "label",
+          { staticClass: "ml-3", attrs: { for: "push_everything" } },
+          [
+            _c(
+              "span",
+              {
+                staticClass: "block text-sm leading-5 font-medium text-gray-700"
+              },
+              [_vm._v("Record Label")]
+            )
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "mt-4 flex items-center" }, [
+        _c("input", {
+          staticClass:
+            "form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out",
+          attrs: {
+            id: "push_email",
+            name: "form-input push_notifications",
+            type: "radio"
+          }
+        }),
+        _vm._v(" "),
+        _c("label", { staticClass: "ml-3", attrs: { for: "push_email" } }, [
+          _c(
+            "span",
+            {
+              staticClass: "block text-sm leading-5 font-medium text-gray-700"
+            },
+            [_vm._v("Independent Artist")]
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "mt-6" }, [
       _c("span", { staticClass: "block w-full rounded-md shadow-sm" }, [
         _c(
           "button",
           {
             staticClass:
-              "w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out",
+              "w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-teal-400 hover:bg-teal-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out",
             attrs: { type: "submit" }
           },
           [_vm._v("\n                  Sign Up\n                ")]
