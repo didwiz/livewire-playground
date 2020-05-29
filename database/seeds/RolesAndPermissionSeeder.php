@@ -31,7 +31,7 @@ class RolesAndPermissionSeeder extends Seeder
 
         // create roles and assign existing permissions
         $role1 = Role::create(['name' => 'label']);
-        $role1->givePermissionTo('create artists');
+        $role1->givePermissionTo('create artist');
         $role1->givePermissionTo('create album');
         $role1->givePermissionTo('update album');
         $role1->givePermissionTo('delete album');
