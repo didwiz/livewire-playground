@@ -123,6 +123,7 @@
                 <div class="mt-1 rounded-md shadow-sm">
                   <input
                     id="email"
+                    v-model="email"
                     type="email"
                     required
                     class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
@@ -140,6 +141,7 @@
                 <div class="mt-1 rounded-md shadow-sm">
                   <input
                     id="password"
+                    v-model="password"
                     type="password"
                     required
                     class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5"
@@ -147,65 +149,47 @@
                 </div>
               </div>
 
-              <!-- <div class="mt-6">
-                <label
-                  for="User Type"
-                  class="block text-sm font-medium leading-5 text-gray-700"
-                >
-                  Are you a
-                </label>
-                <div class="mt-1 rounded-md shadow-sm flex justify-between">
+              <div class="mt-6">
+                <p class="block text-sm font-medium leading-5 text-gray-700">
+                  Are you a :
+                </p>
+                <div class="flex items-center mt-2">
                   <input
                     id="label"
                     type="radio"
+                    v-model="user_type"
                     value="1"
-                    v-model="user_type"
-                    required
+                    class="form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out"
                   />
-                  <label
-                  for="label"
-                  class="block text-sm font-medium leading-5 text-gray-700"
-                  >Record label</label>
-                  <span>or</span>
-                  <input
-                    id="single"
-                    type="radio"
-                    value="0"
-                    v-model="user_type"
-                    required
-                  />
-                   <label
-                  for="single"
-                  class="block text-sm font-medium leading-5 text-gray-700"
-                  >an unsigned artist</label>
-                </div>
-              </div> -->
-              <div class="mt-6">
-                <label
-                  for="password"
-                  class="block text-sm font-medium leading-5 text-gray-700"
-                >
-                  Are you a :
-                </label>
-                <div class="flex items-center mt-2">
-                  <input id="push_everything" name="form-input push_notifications" type="radio" class="form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out" />
-                  <label for="push_everything" class="ml-3">
-                    <span class="block text-sm leading-5 font-medium text-gray-700">Record Label</span>
+                  <label for="label" class="ml-3">
+                    <span
+                      class="block text-sm leading-5 font-medium text-gray-700"
+                      >Record Label</span
+                    >
                   </label>
                 </div>
                 <div class="mt-4 flex items-center">
-                  <input id="push_email" name="form-input push_notifications" type="radio" class="form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out" />
+                  <input
+                    id="push_email"
+                    v-model="user_type"
+                    value="0"
+                    type="radio"
+                    class="form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out"
+                  />
                   <label for="push_email" class="ml-3">
-                    <span class="block text-sm leading-5 font-medium text-gray-700">Independent Artist</span>
+                    <span
+                      class="block text-sm leading-5 font-medium text-gray-700"
+                      >Independent Artist</span
+                    >
                   </label>
                 </div>
               </div>
 
-              <div class="mt-6">
+              <div class="mt-8">
                 <span class="block w-full rounded-md shadow-sm">
                   <button
                     type="submit"
-                    class="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-teal-400 hover:bg-teal-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out"
+                    class="w-full py-4 flex justify-center py-2 px-4 text-base border border-transparent text-sm font-medium rounded-md text-white bg-teal-400 hover:bg-teal-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out"
                   >
                     Sign Up
                   </button>
@@ -220,7 +204,7 @@
       <img
         class="absolute inset-0 h-full w-full object-cover"
         src="https://images.unsplash.com/photo-1505904267569-f02eaeb45a4c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1908&q=80"
-        alt=""
+        alt="signUp"
       />
     </div>
   </div>
@@ -230,12 +214,28 @@
 export default {
   data() {
     return {
-      // axios.post('')
-    }
+      email: null,
+      password: null,
+      user_type: null
+    };
   },
   methods: {
     submit() {
-
+      axios
+        .post("/json/sign-up", {
+          email: this.email,
+          password: this.password,
+          user_type: this.user_type
+        })
+        .then(() => {
+          //todo: fix flash-component
+          // this.$bus.$emit("flash-message", {
+          //   message: "Sign Up successful",
+          //   type: "success"
+          // });
+          alert('redirecting');
+          //todo:redirect to dashboard.
+        });
     }
   }
 };
