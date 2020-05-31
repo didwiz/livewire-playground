@@ -1,5 +1,5 @@
 @extends('layouts.default')
 
 @section('content')
-<login />
+<login></login>
 @endsection

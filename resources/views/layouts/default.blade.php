@@ -8,25 +8,43 @@
     <title>AudioTap</title>
     <!-- Fonts -->
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <link rel="stylesheet" href="/css/app.css">
+    {{--<link rel="stylesheet" href="/css/app.css">--}}
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @stack('styles')
 
-    <script src="/js/app.js" defer></script>
+    {{--<script src="/js/app.js" defer></script>--}}
+    <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 
 <body>
     <header>
         <nav>
-
         </nav>
     </header>
+
     <div id="app" class="flex-center position-ref full-height">
         @yield('content')
+        <flash-message></flash-message>
     </div>
-    <footer>
 
+    <footer>
     </footer>
 
+    <script>
+        @if(Auth::check())
+            window.user = @json([
+                'id' => Auth::user()->id,
+                'name' => Auth::user()->name(),
+                'email' => Auth::user()->email
+            ]);
+        @endif
+
+        @if($message = session('success'))
+            window.flash('{{ $message }}');
+        @elseif($message = session('error'))
+            window.flash('{{ $message }}','error');
+        @endif
+    </script>
     <!-- include vendor/plugin/analytics scripts as shown below in a partial file-->
     {{-- @include('partials.analytics') --}}
 
