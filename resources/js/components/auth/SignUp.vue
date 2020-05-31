@@ -26,7 +26,8 @@
         </div>
 
         <div class="mt-8">
-          <div>
+          <!-- alternate sign up options -->
+          <!-- <div>
             <div>
               <p class="text-sm leading-5 font-medium text-gray-700">
                 Sign up with
@@ -109,7 +110,7 @@
                 </span>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <div class="mt-6">
             <form @submit.prevent="submit">
@@ -212,6 +213,11 @@
 
 <script>
 export default {
+  mounted() {
+    console.log('triggering message')
+    // window.flash('a new flash message');
+    flash('second flash test, test on submit');
+  },
   data() {
     return {
       email: null,
@@ -229,12 +235,18 @@ export default {
         })
         .then(() => {
           //todo: fix flash-component
-          // this.$bus.$emit("flash-message", {
-          //   message: "Sign Up successful",
-          //   type: "success"
-          // });
-          alert('redirecting');
+          this.$bus.$emit("flash-message", {
+            message: "Sign Up successful",
+            type: "success"
+          });
+          alert("redirecting");
           //todo:redirect to dashboard.
+        })
+        .catch(() => {
+          this.$bus.$emit("flash-message", {
+            message: "Sign Up successful",
+            type: "error"
+          });
         });
     }
   }
