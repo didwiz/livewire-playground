@@ -13,10 +13,30 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-    // return view('auth.login');
+
+/**
+ * These are routes for admin users
+ */
+
+Route::group(['prefix' => 'admin', 'middleware' => 'role:admin|super-admin', 'name'=>'admin.'], function () {
+    require __DIR__.'/admin.php';
 });
 
-Route::view('/login', 'auth.login');
-Route::view('/signup', 'auth.sign-up');
+/**
+ * These are routes for non-admin users like independent-artists/label managers
+ */
+
+Route::group(['prefix' => '', 'middleware' => 'role:independent-artist|label|admin|super-admin', 'name'=>'artist.'], function () {
+    require __DIR__.'/artist.php';
+});
+
+Route::get('logout', 'LogoutController');
+
+
+/**
+ * These are routes for pages that don't require authentication, for guest users especially and other users, like a blog page, contact page etc. login/signup
+ */
+
+Route::name('guest')->group(function () {
+    require __DIR__.'/guest.php';
+});
