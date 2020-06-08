@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Json;
 use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
+
 
 class SignUpController extends Controller
 {
@@ -17,24 +19,27 @@ class SignUpController extends Controller
      */
     public function __invoke()
     {
+        //todo: create migration to break name into first_name & last_name and default to null
         request()->validate([
-            'email' => 'required|unique:users',
+            'email' => 'required|unique:users,email',
             'password' => 'required|min:8',
             'user_type' => 'required'
         ]);
-        //todo: create migration to break name into first_name & last_name and default to null
+
         tap(User::create([
             'email' => request('email'),
             'password' => Hash::make(request('password')),
             'name' => ''
         ]), function ($user) {
-            if (request('user_type') === 0) {
+            if (request('user_type') === '0') {
                 $user->assignRole('independent-artist');
             }
-            if (request('user_type') === 1) {
+            if (request('user_type') === '1') {
                 $user->assignRole('label');
             }
+            Auth::login($user);
         });
-        return response(['redirect' => '/home']);
+
+        return response(['redirect' => '/dashboard']);
     }
 }
