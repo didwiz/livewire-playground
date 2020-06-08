@@ -67,7 +67,7 @@ export default {
   },
   methods: {
     clearMessage() {
-      // this.message = null;
+      this.message = null;
     }
   }
 };
@@ -80,11 +80,11 @@ export default {
 
 /* purgecss start ignore */
 .flash-message .success {
-  @apply bg-green-400 text-green-200;
+  @apply bg-green-500 text-green-100;
 }
 
 .flash-message .error {
-  @apply bg-red-400 text-red-200;
+  @apply bg-red-500 text-red-100;
 }
 
 .slide-fade-enter-active,
