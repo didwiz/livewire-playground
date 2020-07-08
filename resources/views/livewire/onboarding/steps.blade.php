@@ -1,3 +1,3 @@
 <div>
-    onboarding content
+    onboarding content steps
 </div>

@@ -3,7 +3,7 @@
 
 <!-- //todo: this is for desktop view alone, workaround for livewire issues -->
 <!-- @section('sidebar-nav')
-<livewire:onboarding.progress key="progress" />
+<livewire:onboarding.progress />
 @endsection -->
 
 @section('dashboard-content')
