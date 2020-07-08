@@ -23,6 +23,12 @@ class LoginController extends Controller
         ]);
 
         Auth::attempt(request()->only('email', 'password'));
-        return response(['message' => 'You have been logged in successfully.', 'redirect' => Session::get('url.intended', '/dashboard')]);
+
+        //todo: check if user is active
+        //todo: convert to middleware
+        if (Auth::user()->has_been_onboarded) {
+            return response(['message' => 'You have been logged in successfully.', 'redirect' => Session::get('url.intended', '/dashboard')]);
+        }
+        return response(['message' => 'You have been logged in successfully.', 'redirect' => '/onboarding']);
     }
 }

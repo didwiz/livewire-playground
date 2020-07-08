@@ -6,11 +6,14 @@
       <div class="mx-auto w-full max-w-sm">
         <div>
           <img
-            class="h-8 w-auto"
-            src="/img/logos/new-logo.svg"
+            class="h-12 w-auto"
+            src="/img/logos/logo.svg"
             alt="Workflow"
           />
-          <h2 class="mt-12 text-3xl leading-9 font-extrabold text-gray-900">
+
+          <div class="svg-bg mb-2 h-32 mt-8"></div>
+
+          <h2 class="mt-4 text-3xl leading-9 font-extrabold text-gray-900">
             Create an account
           </h2>
           <p class="mt-2 text-sm leading-5 text-gray-600 max-w">
@@ -127,14 +130,11 @@
             </form>
           </div>
         </div>
+
+        <div class="mt-5 svg-bg h-32"></div>
       </div>
     </div>
     <div class="hidden lg:block relative w-0 flex-1">
-      <!-- <img
-        class="absolute inset-0 h-full w-full object-cover"
-        src="https://images.unsplash.com/photo-1511367734837-f2956f0d8020?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1988&q=80"
-        alt="signUp"
-      /> -->
       <img
         class="absolute inset-0 h-full w-full object-cover"
         src="/img/signup-cover.png"
@@ -199,4 +199,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.svg-bg {
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ccaec9' fill-opacity='0.27' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+}
+</style>
+

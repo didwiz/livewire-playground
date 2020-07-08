@@ -27,7 +27,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'role:admin|super-admin', 'na
  */
 
 Route::group(['prefix' => '', 'middleware' => 'role:independent-artist|label|admin|super-admin', 'name'=>'artist.'], function () {
-    require __DIR__.'/artist.php';
+    require __DIR__.'/user.php';
 });
 
 Route::get('logout', 'LogoutController');
