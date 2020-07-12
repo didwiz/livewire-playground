@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\OnboardingController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -11,7 +10,6 @@ use Illuminate\Support\Facades\Route;
  */
 
 Route::get('dashboard', fn () => view('dashboard.user.home', ['user' => Auth::user()]));
-Route::get('onboarding', 'OnboardingController@index');
 
 // Route::layout('layouts.dashboard.default')->group(function () {
 //     Route::livewire('/onboarding', 'onboarding');

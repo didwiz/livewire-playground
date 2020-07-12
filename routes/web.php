@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,19 +19,20 @@ use Illuminate\Support\Facades\Route;
  * These are routes for admin users
  */
 
-Route::group(['prefix' => 'admin', 'middleware' => 'role:admin|super-admin', 'name'=>'admin.'], function () {
-    require __DIR__.'/admin.php';
+Route::group(['prefix' => 'admin', 'middleware' => 'role:admin|super-admin', 'name' => 'admin.'], function () {
+    require __DIR__ . '/admin.php';
 });
 
 /**
  * These are routes for non-admin users like independent-artists/label managers
  */
 
-Route::group(['prefix' => '', 'middleware' => 'role:independent-artist|label|admin|super-admin', 'name'=>'artist.'], function () {
-    require __DIR__.'/user.php';
+Route::group(['prefix' => '', 'middleware' => ['redirect_un_onboarded', 'role:independent-artist|label|admin|super-admin'], 'name' => 'artist.'], function () {
+    require __DIR__ . '/user.php';
 });
 
 Route::get('logout', 'LogoutController');
+Route::get('onboarding', 'OnboardingController@index');
 
 
 /**
@@ -38,5 +40,9 @@ Route::get('logout', 'LogoutController');
  */
 
 Route::name('guest')->group(function () {
-    require __DIR__.'/guest.php';
+    require __DIR__ . '/guest.php';
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

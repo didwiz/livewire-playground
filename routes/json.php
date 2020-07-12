@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::name('json.')->group(function () {
-    Route::post('sign-up', 'Json\SignUpController')->name('sign-up');
-    Route::post('login', 'Json\LoginController')->name('login');
-});
+// Route::name('json.')->group(function () {
+//     Route::post('sign-up', 'Json\SignUpController')->name('sign-up');
+//     Route::post('login', 'Json\LoginController')->name('login');
+// });

@@ -9,6 +9,10 @@ class OnboardingController extends Controller
 {
     public function index()
     {
-        return view('onboarding.default', ['user' => Auth::user()]);
+        $user = Auth::user();
+        if ($user->has_been_onboarded) {
+            return redirect('dashboard');
+        }
+        return view('onboarding.default', compact('user'));
     }
 }

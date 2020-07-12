@@ -1,3 +1,11 @@
 /**
 * https://tailwindcss.com/docs/adding-new-utilities
 **/
+
+.invalid-feedback {
+  @apply text-xs italic text-red-500;
+}
+
+.is-invalid {
+  @apply border border-red-500 rounded ;
+}

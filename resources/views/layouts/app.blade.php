@@ -18,14 +18,8 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-        </nav>
-    </header>
-
-    <div id="app" class="flex-center position-ref full-height">
+    <div class="flex-center position-ref full-height">
         @yield('content')
-        <flash-message></flash-message>
     </div>
 
     <footer>

@@ -1,9 +1,9 @@
 <template>
     <div class="container">
-        <div class="bg-blue-300 text-base">
-            <div class="">
-                <div class="card border-2 rounded border-black">
-                    <div class="card-header">Header</div>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">Example Component</div>
 
                     <div class="card-body">
                         I'm an example component.
@@ -15,9 +15,9 @@
 </template>
 
 <script>
-export default {
-  mounted() {
-    console.log('Component mounted.');
-  }
-};
+    export default {
+        mounted() {
+            console.log('Component mounted.')
+        }
+    }
 </script>

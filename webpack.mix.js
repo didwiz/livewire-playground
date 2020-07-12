@@ -1,6 +1,5 @@
 const mix = require("laravel-mix");
-const tailwindcss = require('tailwindcss')
-
+const tailwindcss = require("tailwindcss");
 
 /*
  |--------------------------------------------------------------------------
@@ -15,19 +14,20 @@ const tailwindcss = require('tailwindcss')
 
 mix
   .js("resources/js/app.js", "public/js")
-  .copyDirectory('resources/img', 'public/img')
-  .postCss("resources/css/app.css", "public/css", [require('tailwindcss')])
+  .copyDirectory("resources/img", "public/img")
+  .postCss("resources/css/app.css", "public/css", [require("tailwindcss")])
   .webpackConfig({
     module: {
       rules: [
         {
           test: /\.postcss$/,
           use: ["style-loader", "postcss-loader"]
-
         }
       ]
     }
   });
 
-  mix.browserSync("https://audiotap.test")
-  .disableNotifications();
+mix.browserSync("https://audiotap.test").disableNotifications();
+if (mix.inProduction()) {
+  mix.version();
+}
