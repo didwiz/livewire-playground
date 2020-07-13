@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8d817ac1585806c990e87320b900d546",
+    "content-hash": "71e24aaabe41886c20a499bfe0323715",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -811,16 +811,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v7.19.0",
+            "version": "v7.19.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "67d6d9688122dcf6c449b74ddc873fc9934e81e6"
+                "reference": "4f373c373915ec828e3374029919a6fe946ed6d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/67d6d9688122dcf6c449b74ddc873fc9934e81e6",
-                "reference": "67d6d9688122dcf6c449b74ddc873fc9934e81e6",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/4f373c373915ec828e3374029919a6fe946ed6d9",
+                "reference": "4f373c373915ec828e3374029919a6fe946ed6d9",
                 "shasum": ""
             },
             "require": {
@@ -964,7 +964,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2020-07-07T14:11:36+00:00"
+            "time": "2020-07-10T16:41:39+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -1333,16 +1333,16 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "1.3.0",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "611327efd235c462badf67e901934866ec01395e"
+                "reference": "abca3b56975b2d6f7e482f2b65c1556ff1bd7e65"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/611327efd235c462badf67e901934866ec01395e",
-                "reference": "611327efd235c462badf67e901934866ec01395e",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/abca3b56975b2d6f7e482f2b65c1556ff1bd7e65",
+                "reference": "abca3b56975b2d6f7e482f2b65c1556ff1bd7e65",
                 "shasum": ""
             },
             "require": {
@@ -1392,7 +1392,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-07-03T12:45:59+00:00"
+            "time": "2020-07-08T14:40:56+00:00"
         },
         {
             "name": "maennchen/zipstream-php",
@@ -5993,20 +5993,20 @@
         },
         {
             "name": "hamcrest/hamcrest-php",
-            "version": "v2.0.0",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hamcrest/hamcrest-php.git",
-                "reference": "776503d3a8e85d4f9a1148614f95b7a608b046ad"
+                "reference": "8c3d0a3f6af734494ad8f6fbbee0ba92422859f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hamcrest/hamcrest-php/zipball/776503d3a8e85d4f9a1148614f95b7a608b046ad",
-                "reference": "776503d3a8e85d4f9a1148614f95b7a608b046ad",
+                "url": "https://api.github.com/repos/hamcrest/hamcrest-php/zipball/8c3d0a3f6af734494ad8f6fbbee0ba92422859f3",
+                "reference": "8c3d0a3f6af734494ad8f6fbbee0ba92422859f3",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.3|^7.0"
+                "php": "^5.3|^7.0|^8.0"
             },
             "replace": {
                 "cordoval/hamcrest-php": "*",
@@ -6014,14 +6014,13 @@
                 "kodova/hamcrest-php": "*"
             },
             "require-dev": {
-                "phpunit/php-file-iterator": "1.3.3",
-                "phpunit/phpunit": "~4.0",
-                "satooshi/php-coveralls": "^1.0"
+                "phpunit/php-file-iterator": "^1.4 || ^2.0",
+                "phpunit/phpunit": "^4.8.36 || ^5.7 || ^6.5 || ^7.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0-dev"
+                    "dev-master": "2.1-dev"
                 }
             },
             "autoload": {
@@ -6031,13 +6030,13 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "BSD"
+                "BSD-3-Clause"
             ],
             "description": "This is the PHP port of Hamcrest Matchers",
             "keywords": [
                 "test"
             ],
-            "time": "2016-01-20T08:20:44+00:00"
+            "time": "2020-07-09T08:09:16+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -6240,28 +6239,28 @@
         },
         {
             "name": "mockery/mockery",
-            "version": "1.4.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mockery/mockery.git",
-                "reference": "6c6a7c533469873deacf998237e7649fc6b36223"
+                "reference": "1404386ca3410b04fe58b9517e85d702ab33b2c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mockery/mockery/zipball/6c6a7c533469873deacf998237e7649fc6b36223",
-                "reference": "6c6a7c533469873deacf998237e7649fc6b36223",
+                "url": "https://api.github.com/repos/mockery/mockery/zipball/1404386ca3410b04fe58b9517e85d702ab33b2c6",
+                "reference": "1404386ca3410b04fe58b9517e85d702ab33b2c6",
                 "shasum": ""
             },
             "require": {
-                "hamcrest/hamcrest-php": "~2.0",
+                "hamcrest/hamcrest-php": "^2.0.1",
                 "lib-pcre": ">=7.0",
-                "php": "^7.3.0"
+                "php": "^7.3 || ^8.0"
             },
             "conflict": {
                 "phpunit/phpunit": "<8.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^8.0.0 || ^9.0.0"
+                "phpunit/phpunit": "^8.5 || ^9.0"
             },
             "type": "library",
             "extra": {
@@ -6304,7 +6303,7 @@
                 "test double",
                 "testing"
             ],
-            "time": "2020-05-19T14:25:16+00:00"
+            "time": "2020-07-09T08:31:54+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -6709,6 +6708,315 @@
                 "random"
             ],
             "time": "2018-07-02T15:55:56+00:00"
+        },
+        {
+            "name": "pestphp/pest",
+            "version": "v0.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pestphp/pest.git",
+                "reference": "1241e929b1441097c9be2467d2a75c6d2b3e0a84"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pestphp/pest/zipball/1241e929b1441097c9be2467d2a75c6d2b3e0a84",
+                "reference": "1241e929b1441097c9be2467d2a75c6d2b3e0a84",
+                "shasum": ""
+            },
+            "require": {
+                "nunomaduro/collision": "^5.0.0-BETA3",
+                "pestphp/pest-plugin": "^0.2",
+                "pestphp/pest-plugin-coverage": "^0.2",
+                "pestphp/pest-plugin-init": "^0.2",
+                "php": "^7.3",
+                "phpunit/phpunit": "^9.1.4",
+                "sebastian/environment": "^5.1"
+            },
+            "require-dev": {
+                "ergebnis/phpstan-rules": "^0.15.0",
+                "friendsofphp/php-cs-fixer": "^2.16.3",
+                "illuminate/console": "^7.16.1",
+                "illuminate/support": "^7.16.1",
+                "mockery/mockery": "^1.4.0",
+                "phpstan/phpstan": "^0.12.30",
+                "phpstan/phpstan-strict-rules": "^0.12.2",
+                "rector/rector": "^0.7.37",
+                "symfony/var-dumper": "^5.1.2",
+                "thecodingmachine/phpstan-strict-rules": "^0.12.0"
+            },
+            "bin": [
+                "bin/pest"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.2.x-dev"
+                },
+                "pest": {
+                    "plugins": [
+                        "Pest\\Plugins\\Version"
+                    ]
+                },
+                "laravel": {
+                    "providers": [
+                        "Pest\\Laravel\\PestServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Pest\\": "src/"
+                },
+                "files": [
+                    "src/globals.php",
+                    "src/Pest.php",
+                    "compiled/globals.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nuno Maduro",
+                    "email": "enunomaduro@gmail.com"
+                }
+            ],
+            "description": "An elegant PHP Testing Framework.",
+            "keywords": [
+                "framework",
+                "pest",
+                "php",
+                "test",
+                "testing",
+                "unit"
+            ],
+            "funding": [
+                {
+                    "url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=66BYDWAT92N6L",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/nunomaduro",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/nunomaduro",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2020-07-01T18:26:18+00:00"
+        },
+        {
+            "name": "pestphp/pest-plugin",
+            "version": "v0.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pestphp/pest-plugin.git",
+                "reference": "99d21abb7b1a44aa26c2416ca729d2a989ee2850"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pestphp/pest-plugin/zipball/99d21abb7b1a44aa26c2416ca729d2a989ee2850",
+                "reference": "99d21abb7b1a44aa26c2416ca729d2a989ee2850",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.1||^2.0",
+                "php": "^7.3"
+            },
+            "conflict": {
+                "pestphp/pest": "<0.2"
+            },
+            "require-dev": {
+                "composer/composer": "^1.10",
+                "pestphp/pest": "^0.2",
+                "pestphp/pest-dev-tools": "dev-master"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.2.x-dev"
+                },
+                "class": "Pest\\Plugin\\Manager"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Pest\\Plugin\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "The Pest plugin manager",
+            "keywords": [
+                "framework",
+                "manager",
+                "pest",
+                "php",
+                "plugin",
+                "test",
+                "testing",
+                "unit"
+            ],
+            "funding": [
+                {
+                    "url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=66BYDWAT92N6L",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/nunomaduro",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/nunomaduro",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2020-06-16T18:07:24+00:00"
+        },
+        {
+            "name": "pestphp/pest-plugin-coverage",
+            "version": "v0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pestphp/pest-plugin-coverage.git",
+                "reference": "0849cf8d394124c21f2370f8e37b4bc272ea07c0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pestphp/pest-plugin-coverage/zipball/0849cf8d394124c21f2370f8e37b4bc272ea07c0",
+                "reference": "0849cf8d394124c21f2370f8e37b4bc272ea07c0",
+                "shasum": ""
+            },
+            "require": {
+                "pestphp/pest-plugin": "^0.2",
+                "php": "^7.3"
+            },
+            "conflict": {
+                "pestphp/pest": "<0.2"
+            },
+            "require-dev": {
+                "pestphp/pest": "^0.2",
+                "pestphp/pest-dev-tools": "dev-master"
+            },
+            "type": "library",
+            "extra": {
+                "pest": {
+                    "plugins": [
+                        "Pest\\PluginCoverage\\Plugin"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Pest\\PluginCoverage\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "The Pest Coverage Plugin",
+            "keywords": [
+                "coverage",
+                "framework",
+                "pest",
+                "php",
+                "plugin",
+                "test",
+                "testing",
+                "unit"
+            ],
+            "funding": [
+                {
+                    "url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=66BYDWAT92N6L",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/nunomaduro",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/nunomaduro",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2020-06-11T20:42:52+00:00"
+        },
+        {
+            "name": "pestphp/pest-plugin-init",
+            "version": "v0.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pestphp/pest-plugin-init.git",
+                "reference": "718771dbfcc5bb8ceca238c4754dbc7bfdcb1b09"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pestphp/pest-plugin-init/zipball/718771dbfcc5bb8ceca238c4754dbc7bfdcb1b09",
+                "reference": "718771dbfcc5bb8ceca238c4754dbc7bfdcb1b09",
+                "shasum": ""
+            },
+            "require": {
+                "pestphp/pest-plugin": "^0.2",
+                "php": "^7.3"
+            },
+            "conflict": {
+                "pestphp/pest": "<0.2.3"
+            },
+            "require-dev": {
+                "pestphp/pest": "^0.2",
+                "pestphp/pest-dev-tools": "dev-master"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.2.x-dev"
+                },
+                "pest": {
+                    "plugins": [
+                        "Pest\\Init\\Plugin"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Pest\\Init\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "The Pest Init plugin",
+            "keywords": [
+                "framework",
+                "init",
+                "pest",
+                "php",
+                "plugin",
+                "test",
+                "testing",
+                "unit"
+            ],
+            "funding": [
+                {
+                    "url": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=66BYDWAT92N6L",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/nunomaduro",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/nunomaduro",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2020-07-01T18:35:16+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -9286,23 +9594,23 @@
         },
         {
             "name": "theseer/tokenizer",
-            "version": "1.1.3",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/theseer/tokenizer.git",
-                "reference": "11336f6f84e16a720dae9d8e6ed5019efa85a0f9"
+                "reference": "75a63c33a8577608444246075ea0af0d052e452a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/theseer/tokenizer/zipball/11336f6f84e16a720dae9d8e6ed5019efa85a0f9",
-                "reference": "11336f6f84e16a720dae9d8e6ed5019efa85a0f9",
+                "url": "https://api.github.com/repos/theseer/tokenizer/zipball/75a63c33a8577608444246075ea0af0d052e452a",
+                "reference": "75a63c33a8577608444246075ea0af0d052e452a",
                 "shasum": ""
             },
             "require": {
                 "ext-dom": "*",
                 "ext-tokenizer": "*",
                 "ext-xmlwriter": "*",
-                "php": "^7.0"
+                "php": "^7.2 || ^8.0"
             },
             "type": "library",
             "autoload": {
@@ -9322,7 +9630,13 @@
                 }
             ],
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
-            "time": "2019-06-13T22:48:21+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/theseer",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-07-12T23:59:07+00:00"
         },
         {
             "name": "webmozart/assert",
