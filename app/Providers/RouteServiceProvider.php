@@ -88,7 +88,7 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapJsonRoutes()
     {
         Route::prefix('json')
-            ->middleware('web')
+            ->middleware('web', 'auth')
             ->namespace($this->namespace)
             ->group(base_path('routes/json.php'));
     }

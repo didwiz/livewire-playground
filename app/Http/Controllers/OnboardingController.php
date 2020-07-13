@@ -13,6 +13,6 @@ class OnboardingController extends Controller
         if ($user->has_been_onboarded) {
             return redirect('dashboard');
         }
-        return view('onboarding.default', compact('user'));
+        return view('onboarding.index', compact('user'));
     }
 }

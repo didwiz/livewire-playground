@@ -15,24 +15,27 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-/**
- * These are routes for admin users
- */
 
-Route::group(['prefix' => 'admin', 'middleware' => 'role:admin|super-admin', 'name' => 'admin.'], function () {
-    require __DIR__ . '/admin.php';
+Route::middleware(['auth'])->group(function () {
+    /**
+     * These are routes for admin users
+     */
+
+    Route::group(['prefix' => 'admin', 'middleware' => 'role:admin|super-admin', 'name' => 'admin.'], function () {
+        require __DIR__ . '/admin.php';
+    });
+
+    /**
+     * These are routes for non-admin users like independent-artists/label managers
+     */
+
+    Route::group(['prefix' => '', 'middleware' => ['redirect_un_onboarded', 'role:independent-artist|label|admin|super-admin'], 'name' => 'artist.'], function () {
+        require __DIR__ . '/user.php';
+    });
+
+    Route::get('logout', 'LogoutController');
+    // Route::get('onboarding', 'OnboardingController@index');
 });
-
-/**
- * These are routes for non-admin users like independent-artists/label managers
- */
-
-Route::group(['prefix' => '', 'middleware' => ['redirect_un_onboarded', 'role:independent-artist|label|admin|super-admin'], 'name' => 'artist.'], function () {
-    require __DIR__ . '/user.php';
-});
-
-Route::get('logout', 'LogoutController');
-Route::get('onboarding', 'OnboardingController@index');
 
 
 /**
@@ -44,5 +47,7 @@ Route::name('guest')->group(function () {
 });
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('onboarding', 'OnboardingController@index');
+// Route::livewire('/onboarding', 'onboarding.index');
