@@ -33,8 +33,8 @@ Route::middleware(['auth'])->group(function () {
         require __DIR__ . '/user.php';
     });
 
+    Route::get('onboarding', 'OnboardingController@index');
     Route::get('logout', 'LogoutController');
-    // Route::get('onboarding', 'OnboardingController@index');
 });
 
 
@@ -48,6 +48,3 @@ Route::name('guest')->group(function () {
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('onboarding', 'OnboardingController@index');
-// Route::livewire('/onboarding', 'onboarding.index');
